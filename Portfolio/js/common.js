@@ -3,13 +3,13 @@ const navigationHTML = `
     <nav class="bg-white border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold logo-link">Aamir</a>
+                <a href="#" class="text-2xl font-bold logo-link" data-link="home">Aamir</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="about.html" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="about">About</a>
-                    <a href="project.html" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="project">Projects</a>
-                    <a href="resume.html" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="resume">Resume</a>
-                    <a href="tools.html" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="tools">Tools</a>
-                    <a href="ama.html" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="ama">AMA</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="about" data-link="about">About</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="project" data-link="project">Projects</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="resume" data-link="resume">Resume</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="tools" data-link="tools">Tools</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-gray-900 transition" data-page="ama" data-link="ama">AMA</a>
                 </div>
                 <button class="md:hidden text-gray-700" id="mobile-menu-btn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,12 +30,37 @@ const footerHTML = `
     </footer>
 `;
 
+// Function to get correct path based on current location
+function getCorrectPath(page) {
+    const currentPath = window.location.pathname;
+    const isInPagesFolder = currentPath.includes('/pages/');
+    
+    if (page === 'home') {
+        return isInPagesFolder ? '../index.html' : 'index.html';
+    } else {
+        return isInPagesFolder ? `./${page}.html` : `pages/${page}.html`;
+    }
+}
+
 // Function to inject common elements
 function injectCommonElements() {
     // Create and inject navigation
     const navContainer = document.createElement('div');
     navContainer.innerHTML = navigationHTML;
     document.body.insertBefore(navContainer.firstElementChild, document.body.firstChild);
+
+    // Set correct paths for all links
+    const homeLink = document.querySelector('nav a[data-link="home"]');
+    const navLinks = document.querySelectorAll('nav a[data-page]');
+    
+    if (homeLink) {
+        homeLink.href = getCorrectPath('home');
+    }
+    
+    navLinks.forEach(link => {
+        const page = link.getAttribute('data-link');
+        link.href = getCorrectPath(page);
+    });
 
     // Create and inject footer
     const footerContainer = document.createElement('div');
