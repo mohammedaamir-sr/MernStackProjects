@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation will be injected by common.js -->
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        <h1 class="text-4xl font-bold mb-12">My Projects</h1>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project Card 1 -->
+            <div class="group cursor-pointer">
+                <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl mb-4 overflow-hidden hover:scale-105 transition">
+                    <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-gray-600 transition">Design Studio Platform</h3>
+                <p class="text-gray-600 mb-4">A collaborative platform for designers and engineers to work together seamlessly.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">React</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Tailwind</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Node.js</span>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="group cursor-pointer">
+                <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl mb-4 overflow-hidden hover:scale-105 transition">
+                    <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-gray-600 transition">Event-Driven Payment Platform</h3>
+                <p class="text-gray-600 mb-4">Built scalable payment system using Apache Kafka, reducing transaction failures by 20% and fraud incidents by 18%.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Apache Kafka</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Spring Security</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">PostgreSQL</span>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="group cursor-pointer">
+                <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl mb-4 overflow-hidden hover:scale-105 transition">
+                    <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-gray-600 transition">Full Stack Application (ReactJS + Spring Boot)</h3>
+                <p class="text-gray-600 mb-4">Developed features using ReactJS, TypeScript, and Spring Boot microservices, achieving 30% page load improvement and 25% server latency reduction.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">ReactJS</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">TypeScript</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Spring Boot</span>
+                </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="group cursor-pointer">
+                <div class="w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl mb-4 overflow-hidden hover:scale-105 transition">
+                    <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-gray-600 transition">Cloud-Native CI/CD Infrastructure</h3>
+                <p class="text-gray-600 mb-4">Implemented cloud-native deployments using Docker, Kubernetes, and AWS, reducing deployment failures by 40% and release cycles by 30%.</p>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Docker</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Kubernetes</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">AWS</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be injected by common.js -->
+    <script src="../js/common.js"></script>
+</body>
+</html>
