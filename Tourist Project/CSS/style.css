@@ -1,0 +1,14 @@
+.bg-container {
+  background-image: url('https://ik.imagekit.io/Aamir96/Tourism/sea-ocean.webp');
+  width: 300px;
+  height: 600px;
+  background-size: cover;
+}
+
+.bg-container-places {
+  background-image: url('https://ik.imagekit.io/Aamir96/Tourism/taj-mahal.webp');
+  width: 300px;
+  height: 626px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
